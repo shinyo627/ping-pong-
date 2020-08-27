@@ -47,11 +47,9 @@ class Game {
           }  ;
 
         }
+        
         this.ball.playerWins()
         
     }
 
-    
-   showWinner() {
-   }
 }

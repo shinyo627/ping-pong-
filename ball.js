@@ -3,11 +3,13 @@ class Ball {
         this.x = Math.floor(Math.random() * 300) + 20;
         this.y = height / 2;
         this.r = 20;
-        this.xSpeed = 4;
-        this.ySpeed = 3;
+        this.xSpeed = 9;
+        this.ySpeed = 5;
         // player score
         this.score1 = 0;
         this.score2 = 0;
+        // ball acceleration logic
+        this.counter = 0;
     }
 
     drawBall() {
@@ -17,7 +19,6 @@ class Ball {
         textSize(20);
         text(this.score1, 10, 40);
         text(this.score2, 580, 40);
-        
     }
     // ball move
     moveBall() {
@@ -86,12 +87,11 @@ playerWins() {
 }
 
 restart() {
-    this.xSpeed = 1;
-    this.ySpeed = 3;
+    this.xSpeed = 9;
+    this.ySpeed = 5;
     this.score1 = 0;
     this.score2 = 0;
 }
-
 
    
 
